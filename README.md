@@ -1,5 +1,13 @@
 # Learnning Python
 
-## String
+## Strings
     - Introducao
     - Variaveis
+
+## List
+
+## Dictionary
+    - Tuples
+    - Dictionary
+
+## Functions
