@@ -1,0 +1,24 @@
+[
+  {
+    "titulo": "Esse é mais um teste de Dica",
+    "texto": "<p><span class=\"ql-size-large\">Olá! Você gostou do nosso sistema?</span></p><p><br></p><p>Então aproveite bem! Contrate já o <strong>Familink!!!!</strong></p>",
+    "tipoAcesso": "PRIVADO",
+    "dataPublicacao": 1500516487000,
+    "dataUpdate": 1501244879000,
+    "categoria": "familia",
+    "escola": null,
+    "psicologo": null,
+    "id": 80
+  },
+  {
+    "titulo": "Esse é mais um teste de Dica",
+    "texto": "<p><span class=\"ql-size-large\">Olá! Você gostou do nosso sistema?</span></p><p><br></p><p>Então aproveite bem! Contrate já o <strong>Familink!!</strong></p>",
+    "tipoAcesso": "PRIVADO",
+    "dataPublicacao": 1499514321000,
+    "dataUpdate": 1500513045000,
+    "categoria": "familia",
+    "escola": null,
+    "psicologo": null,
+    "id": 79
+  }
+]
