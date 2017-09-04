@@ -8,7 +8,5 @@ for dica in url_dicas:
 
 
 arquivo = open("dicas.json", "r+")
-
-dicas = json.load(arquivo)
-for dica in dicas:
+for dica in json.load(arquivo):
     print dica['titulo']
