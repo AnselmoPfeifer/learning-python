@@ -24,7 +24,7 @@ def get_nodes_by_name():
     print(cmd)
     out = subprocess.check_output(cmd)
     nodes = json.loads(out)
-    name = nodes
+    return nodes
 
 
 def get_all_jobs():
@@ -36,12 +36,12 @@ def get_all_jobs():
 def create_jobs():
     print ('Starting process of Create Jobs')
     nodes = get_nodes_by_name()
-    # print('nodes: {}'.format(nodes))
-    # for node in nodes:
-    #     node_name = node
-    #     print(node_name)
-    #     replace_name_job(node_name)
-    #     # cmd = "kubectl create -f /etc/docker-gc/job.yaml"
-    #     # return os.system(cmd)
+    print('nodes: {}'.format(nodes))
+    for node in nodes:
+        node_name = node
+        print(node_name)
+        replace_name_job(node_name)
+        # cmd = "kubectl create -f /etc/docker-gc/job.yaml"
+        # return os.system(cmd)
 
 create_jobs()
