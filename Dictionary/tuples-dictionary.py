@@ -56,3 +56,15 @@ for key, value in RESULT['version_map'].iteritems():
             print 'OK'
         else:
             print 'Not'
+
+        hash = app.values()
+        if 'eb0c7f2da3dad8e78d754aad36dbd0318ec7007e' in hash:
+            print 'eb0c7f2da3dad8e78d754aad36dbd0318ec7007e'
+        github = app.keys()
+        if 'githubs' in app:
+            print 'github'
+
+        github = app.items()
+        if 'github' in app:
+            #print app.items()
+            print 'Ok'
