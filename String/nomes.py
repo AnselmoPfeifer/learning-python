@@ -52,3 +52,5 @@ if "use" in text1:
     print True
 else:
     print False
+
+print text1[-3:]
