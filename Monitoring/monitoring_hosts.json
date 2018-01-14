@@ -1,0 +1,19 @@
+{
+  "hosts": [
+    {
+      "name": "Anselmo Pfeifer",
+      "url": "http://www.anselmopfeifer.com",
+      "notification": true
+    },
+    {
+      "name": "WebCARR",
+      "url": "http://www.webcarr.com",
+      "notification": true
+    },
+    {
+      "name": "TeleDill",
+      "url": "http://www.teledil.com.br",
+      "notification": true
+    }
+  ]
+}
