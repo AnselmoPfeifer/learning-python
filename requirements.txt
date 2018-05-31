@@ -1,2 +1,4 @@
-sys
-os
+semver==2.7.9
+fabric==1.14.0
+requests==2.18.4
+tabulate==0.8.2

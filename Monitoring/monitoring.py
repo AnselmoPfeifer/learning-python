@@ -1,6 +1,7 @@
 import json
 import os
 
+HOSTS_FILE = 'hosts.json'
 
 class Host:
     def __init__(self, name, url, notification):
@@ -10,18 +11,32 @@ class Host:
 
 
 def create_json_file():
-    import json
     hosts = {}
     hosts['hosts'] = []
-    json = json.dumps(hosts)
-    f = open("hosts.json", "w")
-    f.write(json)
-    f.close()
+    content = json.dumps(hosts)
+    if not os.path.exists(HOSTS_FILE):
+        f = open(HOSTS_FILE, "w")
+        f.write(content)
+        f.close()
 
 
-def check_list_of_host():
-    lista= json.loads(open('hosts.json').read())
-    if not os.path.exists('hosts.json') and not lista['hosts']:
+def read_json_file():
+    return json.loads(open(HOSTS_FILE).read())
+
+
+def check_exist_hosts():
+    list = read_json_file()
+    if list['hosts']:
+        return True
+    else:
+        return False
+
+
+def update_host_list():
+    create_json_file()
+    list_of_hosts = []
+
+    if not check_exist_hosts():
         print 'Deseja cadastrar novas urls?'
         res = raw_input()
         if res == 'Y':
@@ -39,19 +54,13 @@ def check_list_of_host():
                 notification = ''
             host = Host(name=name, url=url, notification=notification)
             list_of_hosts.append(host)
-            new_file = open('hosts.json', 'w')
-            new_file.write(list_of_hosts)
-            new_file.close()
-
-    else:
-        list_of_url = json.loads(open(file_name).read())
 
 
+            # TODO update file list
+            # new_file = open(HOSTS_FILE, 'w')
+            # new_file.write(list_of_hosts)
+            # new_file.close()
 
 
 
-
-#check_list_of_host()
-# host = Host(name='Test', url='https://www.anselmopfeifer.com', notification=False)
-
-
+# TODO create get request urls
